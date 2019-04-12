@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Wizard.css'
 import { Link } from 'react-router-dom'
+import Axios from 'axios';
 
 export default class Wizard extends Component {
     constructor(props) {
@@ -53,7 +54,15 @@ export default class Wizard extends Component {
         this.setState({
             zip
         })
-     }
+    }
+    
+    submitHouse = () => { 
+        const { name, address, state, city, zip} = this.state
+        Axios.post('/house/all', { name, address, state, city, zip })
+            .then(res => { 
+                console.log(res.data)
+            })
+    }
 
 
 
@@ -91,7 +100,7 @@ export default class Wizard extends Component {
                         </div>
                     </div>
                 </div>
-                <button className = 'complete-button'>Complete</button>
+                <button onClick={this.submitHouse} className = 'complete-button'>Complete</button>
             </div>
         )
     }

@@ -1,0 +1,23 @@
+.listing {
+    width: 90%;
+    max-width: 1000px;
+    height: 150px;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.listing-url {
+    width: 150px;
+    height: 150px;
+    border: 1px solid red;
+    margin-right: 15px;
+}
+
+.info {
+    margin-right: 15px;
+
+}

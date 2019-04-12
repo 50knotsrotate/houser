@@ -28,7 +28,12 @@ export default class Dashboard extends Component {
             return (
                 <House
                     key={index}
-                    house={house}
+                    name={house.name}
+                    zip={house.zip}
+                    city={house.city}
+                    id={house.id}
+                    state={house.state}
+                    address={house.address}
                 />
             )
         }) )
@@ -38,6 +43,7 @@ export default class Dashboard extends Component {
                     <h1>Dashboard</h1>
                     <Link to = '/wizard'><button className='new-property-button'>Add New Property</button></Link>
                 </div>
+                <h1 className='home-listing'>Home Listings</h1>
                 {this.state.houses.length ? houses : <h1 className = 'loading'>Loading...</h1>}
             </div>
         )

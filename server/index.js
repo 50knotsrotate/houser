@@ -22,7 +22,8 @@ massive(CONNECTION_STRING)
         console.log('DB failed to connect')
     })
 
-    app.get('/house/all', controller.getAllHouses)
+app.get('/house/all', controller.getAllHouses)
+app.post('/house/all', controller.addHouse)
 
 app.listen(PORT, () => { 
     console.log(`Server started on port ${PORT}`)

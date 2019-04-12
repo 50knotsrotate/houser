@@ -22,6 +22,12 @@
     border: none;
     font-family: monospace;
     font-size: 30px;
+}
 
-    
+.home-listing {
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    font-size: 30px;
+    text-align: center;
 }
