@@ -36,5 +36,6 @@
     "fun"
   ],
   "author": "Patrick McMahon",
-  "license": "ISC"
+  "license": "ISC",
+  "proxy": "http://localhost:4000"
 }

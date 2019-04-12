@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import House from '../House/House'
 
 export default class Dashboard extends Component { 
     constructor(props) {
@@ -9,6 +10,7 @@ export default class Dashboard extends Component {
         return (
             <div>
                 <h1>Dahsboard</h1>
+                <House />
             </div>
         )
     }
