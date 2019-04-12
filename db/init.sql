@@ -13,4 +13,5 @@ create table houses(
 -- values("Humble abode", "6 Waterway Way", "Colts Neck", 07722);
 
 insert into houses(name, address, city, state, zip)
-values ('Humble abode', '6 Armistead', 'Colts Neck', 'NJ', 07722 )
+values ('Humble abode', '6 Armistead', 'Colts Neck', 'NJ', 07722 ),
+('Cool Ranch (not doritos a house)', '6 Nacho Way', 'Toldeo', 'Ohio', 18845);

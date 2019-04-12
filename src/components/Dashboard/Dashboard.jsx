@@ -2,23 +2,43 @@ import React, { Component } from 'react'
 import House from '../House/House'
 import './Dashboard.css'
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export default class Dashboard extends Component { 
     constructor(props) {
         super(props)
         this.state = {
-
+            houses: []
         }
     }
 
+    componentDidMount = () => { 
+        axios.get('/house/all')
+            .then(houses => {
+                this.setState({
+                    houses: houses.data
+                })
+        })
+
+    }
+
     render() { 
+
+        const houses =( this.state.houses.map((house, index) => {
+            return (
+                <House
+                    key={index}
+                    house={house}
+                />
+            )
+        }) )
         return (
             <div className='dashboard'>
                 <div className= 'top'>
                     <h1>Dashboard</h1>
                     <Link to = '/wizard'><button className='new-property-button'>Add New Property</button></Link>
                 </div>
-                <House />
+                {this.state.houses.length ? houses : <h1 className = 'loading'>Loading...</h1>}
             </div>
         )
     }
