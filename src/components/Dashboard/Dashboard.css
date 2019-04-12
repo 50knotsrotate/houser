@@ -1,0 +1,27 @@
+.dashboard {
+    width: 80%;
+    height: 100vh;
+    overflow-y: scroll;
+    margin: 0 auto;
+    background-color:rgba(100,55,200,.5);
+}
+
+.top {
+    width: 90%;
+    background-color: transparent;
+    font-family: monospace;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    font-size: 3em;
+}
+
+.new-property-button {
+    background-color: #00c80066;
+    border: none;
+    font-family: monospace;
+    font-size: 30px;
+
+    
+}
